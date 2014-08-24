@@ -1,0 +1,74 @@
+---
+title       : ShinyApp Presentation
+subtitle    : 
+author      : Darren Donhardt
+job         : 
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+
+### ShinyApp Details
+
+* Application name: Assignment
+* Publish date: 24 Aug 2014
+* Author: Darren Donhardt
+
+---
+
+### Introduction and purpose
+
+The application plots, using ggplot2, the Horsepower (hp) against Miles per Gallon (mpg), whilst showing a "loess" curve.
+
+
+The intention and purpose of this application is to:
+
+* demonstrate a reactive application that shows the data of the mtcars data set as found in the "datasets" library.
+* demonstrate how the "loess" curve changes in response to changes in the data set. 
+* Demonstates particular bias that can be introduced when a sample data set is not chosen well.
+
+---
+
+### How to use
+
+The application can accessed by going to http://darrendonhardt.shinyapps.io/Assignment/
+
+The application shows filters on the left hand side and "loess" plot on the right hand side.
+
+Filters are provided by way of sliders. The sliders represent some of the other variables in the dataset, namely:
+
+* Number of Cylinders
+* Displacement (cu in)
+* Weight (lb/1000)
+* Quarter mile time (secnods)
+
+The plot (hp vs mpg) can be adjusted by making the necessary changes to the sliders.
+
+---
+
+### Construction of the Shiny App
+
+The Shiny app uses the R library "datasets", in particular the mtcars data:
+
+
+```r
+library(datasets)
+head(mtcars, n=3)
+```
+
+```
+##                mpg cyl disp  hp drat    wt  qsec vs am gear carb
+## Mazda RX4     21.0   6  160 110 3.90 2.620 16.46  0  1    4    4
+## Mazda RX4 Wag 21.0   6  160 110 3.90 2.875 17.02  0  1    4    4
+## Datsun 710    22.8   4  108  93 3.85 2.320 18.61  1  1    4    1
+```
+
+The application is composed of two components:
+
+1. server.R (server side code)
+2. ui.R (presentation side code)
+
+The relevant R code can be found https://github.com/darrendonhardt/DataProductsAssignment

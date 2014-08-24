@@ -1,0 +1,43 @@
+---
+title: "Shiny App Documentation"
+author: "Darren Donhardt"
+date: "Sunday, August 24, 2014"
+output: html_document
+---
+
+
+<br/>
+
+ShinyApp Details:
+
+* Application name: Assignment
+* Publish date: 24 Aug 2014
+* Author: Darren Donhardt
+
+<br/>
+
+### Introduction and purpose
+
+The intention of this application is to demonstrate a reactive application
+that shows the data of the mtcars data set as found in the "datasets" library.
+
+The purpose of this application is to demonstrate how the "loess" curve changes in response to changes in the data set. Subsequently this demonstates particular bias that can be introduced when a sample data set is not chosen well.
+
+<br/>
+
+### How to use
+
+The application plots, using ggplot2, the Horsepower (hp) against Miles per Gallon (mpg), whilst showing a "loess" curve.
+
+Filters are provided by way of sliders. The sliders represent some of the other variables in the dataset, namely:
+
+* Number of Cylinders
+* Displacement (cu in)
+* Weight (lb/1000)
+* Quarter mile time (secnods)
+
+The plot (hp vs mpg) can be adjusted by making the necessary changes to the sliders.
+
+
+
+
